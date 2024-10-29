@@ -1,0 +1,44 @@
+.header {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  height: 100px;
+  border-bottom: #717171 1px solid;
+  margin-bottom: 20px;
+  > div > a > img {
+    width: 100px;
+    margin-right: 20px;
+  }
+}
+
+.field {
+  > label > input {
+    width: 600px;
+  }
+}
+
+.posts {
+  padding-left: 140px;
+  > p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  p {
+    color: #c0c0c0;
+  }
+  > div {
+    max-width: 1000px;
+    color: #c0c0c0;
+    margin-bottom: 20px;
+    > h2 {
+      color: #f0f0f0;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: color 0.3s ease-out;
+      &:hover {
+        color: #6899ed;
+      }
+    }
+  }
+}

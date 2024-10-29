@@ -1,13 +1,23 @@
-import { SearchField } from '../search-field/SearchField';
+import { FC, useEffect } from 'react';
+import { SearchField } from '../search-field/SearchField.tsx';
+import { useNavigate } from 'react-router-dom';
 import styles from './Home.module.sass';
 
-function Home() {
+export const Home: FC = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    localStorage.removeItem('searchTerm');
+  }, []);
+
+  const handleSearch = () => {
+    navigate('/results');
+  };
+
   return (
     <div className={styles.home}>
       <img src='/logo.svg' alt='google' />
-      <SearchField />
+      <SearchField refetch={handleSearch} className={styles.field} />
     </div>
   );
-}
-
-export default Home;
+};

@@ -1,16 +1,25 @@
 .field
     position: relative
-    .icon
+    > label > svg
         position: absolute
-        left: 22px
-        top: 18px
-        color: #313131
-    input
-        width: 830px
+        top: 16px
+        left: 20px
+        color: #6f6f6f
+        transition: color 0.3s ease
+
+    &:focus-within
+        > label > svg
+            color: #000
+        > label > input
+            outline: 1px solid #4280ef
+
+    > label > input
         height: 55px
         border: none
         outline: none
         border-radius: 30px
         padding: 14px
-        padding-left: 60px
+        padding-left: 58px
         font-size: 18px
+        transition: outline 0.3s ease
+
